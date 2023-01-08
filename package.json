@@ -1,21 +1,21 @@
 {
-  "name": "jwt-auth-mongo",
+  "name": "skytrack-server",
   "version": "1.0.0",
-  "description": "A simple authentication node(express) app using jwt, and configuring mongoDb with it",
+  "description": "server for the skytrack react native application",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gagandeepchauhan/jwt-auth-mongo.git"
+    "url": "git+https://github.com/gagandeepchauhan/skytrack-server.git"
   },
   "author": "skydeep",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gagandeepchauhan/jwt-auth-mongo/issues"
+    "url": "https://github.com/gagandeepchauhan/skytrack-server/issues"
   },
-  "homepage": "https://github.com/gagandeepchauhan/jwt-auth-mongo#readme",
+  "homepage": "https://github.com/gagandeepchauhan/skytrack-server#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",

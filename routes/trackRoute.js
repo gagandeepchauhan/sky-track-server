@@ -38,4 +38,31 @@ router.post('/tracks', authenticate, async (req,res) => {
     }
 })
 
+router.delete('/tracks/:id', authenticate, async (req,res) => {
+    const { user } = req
+    const { id } = req.params
+    try{
+        const track = await Track.findOne({
+            userId: user._id
+        })
+        if(!track){
+            return res.status(403).json({
+                data: {
+                    message: "Unauthorized action"
+                }
+            })
+        }
+        await Track.findByIdAndRemove(id)
+        return res.status(200).json({
+            data: {
+                message: "Track deleted successfully"
+            }
+        })
+    }catch(err){
+        res.status(504).json({
+            error: 'Unable to delete track'
+        })
+    }
+})
+
 module.exports = router

@@ -58,7 +58,7 @@ router.post("/signin", async (req,res)=>{
 })
 
 function generateToken(data){
-    return jwt.sign(data, process.env.SECRET_KEY, { expiresIn: '30m' })
+    return jwt.sign(data, process.env.SECRET_KEY, { })
 }
 
 module.exports  = router
